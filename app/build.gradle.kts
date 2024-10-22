@@ -27,6 +27,8 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
+            isDebuggable = true
         }
     }
     compileOptions {
@@ -42,6 +44,7 @@ android {
             version = "3.22.1"
         }
     }
+    ndkVersion = "28.0.12433566"
     buildFeatures {
         viewBinding = true
     }
